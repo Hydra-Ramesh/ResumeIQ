@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import "@fontsource-variable/geist";
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -105,4 +105,70 @@
   html {
     @apply font-sans;
   }
+}
+
+
+@keyframes gentle-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes gentle-float-delayed {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes home-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.gentle-float {
+  animation: gentle-float 7s ease-in-out infinite;
+}
+
+.gentle-float-delayed {
+  animation: gentle-float-delayed 6s ease-in-out 1s infinite;
+}
+
+.home-marquee {
+  animation: home-marquee 40s linear infinite;
+}
+
+.floating-widget {
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(24px);
+
+  padding: 1.25rem;
+  border-width: 1px;
+  border-radius: 1.5rem;
+
+  flex-direction: column;
+  gap: 0.75rem;
+
+  transition:
+    transform 500ms,
+    box-shadow 500ms;
+}
+
+.floating-widget:hover {
+  transform: scale(1.15);
+  z-index: 50;
 }

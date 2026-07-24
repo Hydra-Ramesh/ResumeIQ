@@ -11,7 +11,7 @@ export function EditorPreview() {
         <div className="w-3 h-3 rounded-full bg-green-500/50" />
 
         <div className="mx-auto px-3 py-1 rounded bg-white/5 text-xs text-slate-400 font-mono">
-          applyiq-editor.tex
+          resumeiq-editor.tex
         </div>
       </div>
 

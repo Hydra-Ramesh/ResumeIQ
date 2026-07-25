@@ -8,6 +8,8 @@ import { AboutPage } from "./pages/AboutPage.jsx";
 import { Careers } from "./pages/CarrerPage.jsx";
 import { Blog } from "./pages/Blog.jsx";
 import { Contact } from "./pages/Contact.jsx";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy.jsx";
+import { TermsOfService } from "./pages/TermsOfService.jsx";
 
 export function AppRoutes() {
   return (
@@ -22,6 +24,8 @@ export function AppRoutes() {
       <Route path="/careers" element={<Careers />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfService />} />
     </Routes>
   );
 }

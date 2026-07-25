@@ -8,9 +8,11 @@ import { AboutPage } from "./pages/AboutPage.jsx";
 import { Careers } from "./pages/CarrerPage.jsx";
 import { Blog } from "./pages/Blog.jsx";
 import { Contact } from "./pages/Contact.jsx";
+
 export function AppRoutes() {
   return (
     <Routes>
+      {/* Public Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/features" element={<FeaturesPage />} />
       <Route path="/pricing" element={<PricingPage />} />

@@ -83,13 +83,23 @@ export function HomeFooter() {
             </h4>
 
             <ul className="space-y-3 text-sm text-slate-400">
-              {["Twitter / X", "LinkedIn", "GitHub", "Instagram"].map(
-                (social) => (
-                  <li key={social}>
-                    <span className="text-slate-500">{social}</span>
-                  </li>
-                ),
-              )}
+              {[
+                ["X / Twitter", "https://x.com"],
+                ["LinkedIn", "https://www.linkedin.com"],
+                ["GitHub", "https://github.com"],
+                ["Instagram", "https://www.instagram.com"],
+              ].map(([label, href]) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-slate-500 hover:text-blue-400 transition-colors"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

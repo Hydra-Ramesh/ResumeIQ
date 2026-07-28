@@ -10,6 +10,8 @@ import { Blog } from "./pages/Blog.jsx";
 import { Contact } from "./pages/Contact.jsx";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy.jsx";
 import { TermsOfService } from "./pages/TermsOfService.jsx";
+import { RegisterPage,LoginPage} from "./helpers/lazyPages.js";
+
 
 export function AppRoutes() {
   return (
@@ -26,6 +28,9 @@ export function AppRoutes() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsOfService />} />
+      {/* Auth Routes */}
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   );
 }
